@@ -35,7 +35,7 @@ namespace WindowsFormsAppCovid19Monitor
             var collCovid19Confirmed = MongoDataBase.GetCollection<BsonDocument>("Covid19");
             var listCovidConfirmed = collCovid19Confirmed.Find(f => true).ToEnumerable();
 
-            foreach (BsonDocument bdoc in listCovidConfirmed.AsEnumerable())
+            foreach (BsonDocument bdoc in listCovidConfirmed)
             {
                 foreach (BsonElement element in bdoc)
                 {
